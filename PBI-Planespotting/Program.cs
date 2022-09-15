@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 DependencyMapper.Map(builder.Services);
 builder.Services.AddRazorPages();
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 
